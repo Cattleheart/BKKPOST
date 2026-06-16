@@ -1,0 +1,77 @@
+.hero-section {
+    background-color: var(--accent-color);
+}
+
+.hero-section .hero-cssgal {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    color: #fff;    
+    text-align: center;
+}
+
+.hero-section .hero-cssgal .slider {
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    transition: transform 0.8s ease-in-out; /* Keeps the JS slide-shift smooth */
+}
+
+.hero-section .hero-cssgal .slider > * {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-section .hero-cssgal .slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-section .hero-cssgal .bullets {
+    padding-top: var(--space-xs);
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-section .hero-cssgal .bullets > a {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: rgb(141, 141, 141);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero-section .hero-cssgal .bullets > a:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.hero-section .hero-cssgal .bullets > a.active {
+    background: var(--button-color) !important;
+}
+
+.mobile-only {
+    display: block !important;
+}
+
+.desktop-only {
+    display: none !important;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .mobile-only {
+        display: none !important;
+    }
+
+    .desktop-only {
+        display: block !important;
+    }
+    
+}

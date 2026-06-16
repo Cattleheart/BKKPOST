@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <body>
     <header class="header">
-        <a href="#"><img src="assets/img/bp-logo.svg" alt="Bangkok Post Logo" class="logo"></a>
+        <a href="#"><img src="assets/img/ico/bp-logo.svg" alt="Bangkok Post Logo" class="logo"></a>
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#" class="nav-link">Our product</a></li>
@@ -17,26 +17,113 @@
                 <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
             </ul>
+        </nav>
     </header>
     <main class="main-content">
         <section class="hero-section">
-            <h1 class="hero-title">Discover Bangkok's Vibrant Culture and Latest News</h1>
-            <p class="hero-text">Stay updated with the latest happenings in Bangkok, from cultural events to breaking news. Explore our in-depth coverage and insightful articles.</p>
-            <button class="hero-btn">Explore Now</button>
-        </section>
-        <section class="pricing-section">
-            <h2 class="section-title">Subscription Plans</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3 class="card-title   ">Basic</h3>
-                    <p class="card-price">$5/month</p>
-                    <ul class="card-features">  
-                        <li>Access to basic news articles</li>
-                        <li>Weekly newsletter</li>
-                    </ul>
+            <div class="hero-cssgal">
+                <div class="slider">
+                    <div>
+                        <img src="assets/img/img-promotion_desktop.jpg" alt="Feels like the real paper Anytime, Any place" class="hero-image desktop-only">
+                        <img src="assets/img/img-promotion_mobi.jpg" alt="Feels like the real paper Anytime, Any place" class="hero-image mobile-only">
+                    </div>
+                    <div>
+                        <img src="assets/img/img-promotion2_desktop.jpg" alt="1-year subscription 13 THB a day" class="hero-image desktop-only">
+                        <img src="assets/img/img-promotion2_mobi.jpg" alt="1-year subscription 13 THB a day" class="hero-image mobile-only">
+                    </div>
+                    <div>
+                        <img src="assets/img/img-promotion_desktop.jpg" alt="Feels like the real paper Anytime, Any place" class="hero-image desktop-only">
+                        <img src="assets/img/img-promotion_mobi.jpg" alt="Feels like the real paper Anytime, Any place" class="hero-image mobile-only">
+                    </div>
+                </div>
+                <div class="bullets">
+                    <a href="#" class="active" data-index="0"></a>
+                    <a href="#" data-index="1"></a>
+                    <a href="#" data-index="2"></a>
                 </div>
             </div>
         </section>
+<section class="pricing-section">
+    <form action="/subscribe-endpoint" method="POST" class="container">
+        <div class="pricing-cards">
+            <label class="pricing-card">
+                <input type="radio" name="subscription_plan" value="1-month">
+                <span class="radio-button"></span>
+                <div class="card-content">
+                    <h3 class="card-title">1 Month</h3>
+                    <p class="card-price">700 Baht</p>
+                    <ul class="card-features">   
+                        <li>Plus 5 free back issues</li>
+                    </ul>
+                </div>
+            </label>
+            <label class="pricing-card">
+                <input type="radio" name="subscription_plan" value="3-months">
+                <span class="radio-button"></span>
+                <div class="card-content">
+                    <h3 class="card-title">3 Months</h3>
+                    <p class="card-price">1,700 Baht</p>
+                    <p class="card-price-sub">2,100 Baht/month</p>
+                    <ul class="card-features">   
+                        <li>Plus 10 free back issues</li>
+                    </ul>
+                </div>
+            </label>
+            <label class="pricing-card">
+                <input type="radio" name="subscription_plan" value="6-months">
+                <span class="radio-button"></span>
+                <div class="card-content">
+                    <h3 class="card-title">6 Months</h3>
+                    <p class="card-price">2,800 Baht</p>
+                    <p class="card-price-sub">4,200 Baht/month</p>
+                    <ul class="card-features">   
+                        <li>Plus 30 free back issues</li>
+                    </ul>
+                </div>
+            </label>
+            <label class="pricing-card">
+                <input type="radio" name="subscription_plan" value="12-months">
+                <span class="radio-button"></span>
+                <div class="card-content">
+                    <h3 class="card-title">12 Months</h3>
+                    <p class="card-price">4,700 Baht</p>
+                    <p class="card-price-sub">8,400 Baht/month</p>
+                    <ul class="card-features">   
+                        <li>Plus 5 free back issues</li>
+                    </ul>
+                </div>
+            </label>
+            <label class="pricing-card">
+                <input type="radio" name="subscription_plan" value="36-months">
+                <span class="radio-button"></span>
+                <div class="card-content">
+                    <h3 class="card-title">36 Months</h3>
+                    <p class="card-price">12,600 Baht</p>
+                    <p class="card-price-sub">25,200 Baht/month</p>
+                    <ul class="card-features">   
+                        <li>Plus 10 free back issues</li>
+                    </ul>
+                </div>
+            </label>
+            <label class="pricing-card">
+                <input type="radio" name="subscription_plan" value="epaper-print-12-months">
+                <span class="radio-button"></span>
+                <div class="card-content">
+                    <h3 class="card-title">Epaper + Print Bundle<br>12 Months</h3>
+                    <p class="card-price">12,850 Baht</p>
+                    <ul class="card-features">   
+                        <li>Plus 30 free back issues</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+        <div class="form-actions">
+            <p class="selection-warning">No plan selected, please choose one to continue.</p>
+            <button type="submit" class="submit-button">Subscribe Now</button>
+            <p class="note">You can cancel anytime.</p>
+        </div>
+    </form>
+</section>
         <section class="content-section">
             <h2 class="section-title">Welcome to BKKPOST</h2>
             <p class="section-text">Your go-to source for the latest news and updates in Bangkok. Stay informed with our comprehensive coverage of local events, culture, and more.</p>
@@ -62,5 +149,6 @@
     <footer class="footer">
         <p class="footer-text">&copy; 2024 BKKPOST. All rights reserved.</p>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
