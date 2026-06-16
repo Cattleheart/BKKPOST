@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #F9F5EA;
+    --secondary-color: #2ecc71;
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --text-secondary-color: #1F1F1F;
+    --text-subtle-color: #424242;
+    --text-display-color: #001868;
+    --text-cross-color: #9F9F9F;
+    --border-color: #D8D8DF;
+    --radio-color: #FFFFFF;
+    --radio-border-color: #AEADAC;
+    --header-color: #0054C6;
+    --header-text-color: #FFFFFF;
+    --button-color: #000000;
+    --pill-color: #C5D5F4;
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+  
+    /* Typography */
+    --font-primary: "DM Sans", sans-serif;
+    --font-display: "DM Serif Display", serif;
+    --font-serif: "DM Serif Text", serif;
+    --font-monospace: "DM Mono", monospace;
+    --text-base: 16px;
+}

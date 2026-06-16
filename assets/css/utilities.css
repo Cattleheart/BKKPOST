@@ -1,0 +1,4 @@
+.flex { display: flex; }
+.gap-m { gap: var(--space-m); }
+.p-m { padding: var(--space-m); }
+.bg-primary { background-color: var(--primary); color: white; }
