@@ -91,5 +91,12 @@ const wrapper = document.querySelector(wrapperSelector);
     startAutoPlay();
 }
 
+document.getElementById('pricing-form').addEventListener('submit', function(e) {
+
+    const selectedPlan = document.querySelector('input[name="subscription_plan"]:checked').value;
+    sessionStorage.setItem('selected_plan', selectedPlan);
+    
+});
+
 Slideshow('.hero-slider', 6000, 'X');
 Slideshow('.content-slider', 6000, 'Y');

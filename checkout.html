@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Your Order - Bangkok Post</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header container">
+            <a href="#" class="header-logo"><img src="assets/img/ico/bp-logo.svg" alt="Bangkok Post Logo" class="logo"></a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav class="nav" id="main-navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Our product</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">How to subscribe</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Read Epaper</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="summary-section container py-xl">
+            <h2 class="section-title">Payment Information</h2>
+            <div class="summary-card">
+                <div class="card-order">
+                    <h3 class="sub-title">Order Item</h3>
+                    <hr>
+                    <div class="card-plan">
+                        <p><small>Selected Plan:</small><br><span id="display-plan">Loading plan...</span></p>
+                        <p><small>Price:</small><br><span id="display-price">--</span></p>
+                        <p><small>You can cancel anytime.</small></p>
+                    </div>
+                    <a href="index.html" class=""><small>Change Plan</small></a>
+                    <div class="card-total">
+                        <div class="card-redeem">
+                            <input type="text" id="coupon-input" placeholder="Promo Code">
+                            <button type="button" id="apply-coupon" class="button">Apply</button>
+                        </div>
+                        
+                        <div id="coupon-message"></div>
+
+                        <div class="total-breakdown">
+                            <div class="total-row">
+                                <p>Price:</p>
+                                <span id="sum-price">--</span>
+                            </div>
+                            <div class="total-row discount-highlight">
+                                <p>Discount:</p>
+                                <span id="sum-discount">0 THB</span>
+                            </div>
+                            <hr class="total-divider">
+                            <div class="total-row total-row-final">
+                                <p>Total:</p>
+                                <span id="sum-total">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="payment-section">
+                <h3 class="sub-title">Payment method</h2>
+                <hr class="payment-divider">
+
+                <div class="alert-banner">
+                    <p>After payment, you will be redirected to the information page. Please accept T&Cs</p>
+                </div>
+
+                <form id="payment-form" onsubmit="event.preventDefault();">
+                    <div class="payment-tabs">
+                        <label class="tab-option active">
+                            <input type="radio" name="payment_method" value="credit_card" checked class="sr-only">
+                            <img src="assets/img/ico/credit.svg">
+                            <span class="tab-text">Credit Card</span>
+                        </label>
+
+                        <label class="tab-option">
+                            <input type="radio" name="payment_method" value="qr_code" class="sr-only">
+                            <img src="assets/img/ico/qr.svg">
+                            <span class="tab-text">QR Code</span>
+                        </label>
+                    </div>
+
+                    <div class="form-fields-group">
+                        <div class="input-control">
+                            <label for="cardholder-name">Cardholder Name</label>
+                            <input type="text" id="cardholder-name" placeholder="Cardholder Name" required>
+                        </div>
+
+                        <div class="input-control">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" placeholder="••••  ••••  ••••  ••••" maxlength="19" required>
+                        </div>
+
+                        <div class="input-row-split">
+                            <div class="input-control">
+                                <label for="expiry-date">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM / YY" maxlength="5" required>
+                            </div>
+
+                            <div class="input-control">
+                                <label for="cvv">CVV</label>
+                                <div class="input-icon-container">
+                                    <input type="password" id="cvv" placeholder="•••" maxlength="3" required>
+                                    <svg class="inner-input-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v8z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-button">
+                    <button type="submit" class="button">Confirm Payment</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">&copy; 2026 Bangkok Post Public Company Limited</p>
+        <ul class="footer-links">
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Republishing permission</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Cookies policy</a></li>
+            <li><a href="#">Online advertising</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Tell us what you think</a></li>
+            <li><a href="#">Partnership</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const displayPlan = document.getElementById('display-plan');
+            const displayPrice = document.getElementById('display-price');
+            const sumPrice = document.getElementById('sum-price');
+            const sumDiscount = document.getElementById('sum-discount');
+            const sumTotal = document.getElementById('sum-total');
+            
+            const couponInput = document.getElementById('coupon-input');
+            const applyCouponBtn = document.getElementById('apply-coupon');
+            const couponMessage = document.getElementById('coupon-message');
+
+            let parsedNumericPrice = 0;
+
+            // 1. Target URL address parameter inputs
+            const urlParameters = new URLSearchParams(window.location.search);
+            const userSelection = urlParameters.get('subscription_plan');
+
+            // Default system fallback framework loop 
+            if (!userSelection) {
+                displayPlan.textContent = "No plan chosen";
+                updateBillingDisplay("--", "--", "--");
+                disableCouponSystem();
+                return;
+            }
+
+            // Data Map Matrix with absolute raw pricing numbers for mathematical updates
+            const pricingDetails = {
+                '1-month': { name: '1 Month Plan', numericAmount: 700 },
+                '3-months': { name: '3 Months Plan', numericAmount: 1700 },
+                '6-months': { name: '6 Months Plan', numericAmount: 2800 },
+                '12-months': { name: '12 Months Plan', numericAmount: 4700 },
+                '36-months': { name: '36 Months Plan', numericAmount: 12600 },
+                'epaper-print-12-months': { name: '12 Months Epaper + Print Bundle', numericAmount: 12850 }
+            };
+
+            const selectedPlan = pricingDetails[userSelection.toLowerCase().trim()];
+
+            if (selectedPlan) {
+                parsedNumericPrice = selectedPlan.numericAmount;
+                const completePriceString = formatCurrencyString(parsedNumericPrice);
+
+                // Map initial base pricing parameters cleanly down to text outputs
+                displayPlan.textContent = selectedPlan.name;
+                displayPrice.textContent = completePriceString;
+                
+                updateBillingDisplay(completePriceString, "0 THB", completePriceString);
+            } else {
+                displayPlan.textContent = "Invalid Plan Selected";
+                updateBillingDisplay("--", "--", "--");
+                disableCouponSystem();
+            }
+
+            // 2. Coupon Applied Evaluation Logic Lookups
+            applyCouponBtn.addEventListener('click', () => {
+                if (parsedNumericPrice === 0) return;
+
+                const enteredCodeValue = couponInput.value.trim().toUpperCase();
+                couponMessage.className = ''; // Clear prior message classes cleanly
+
+                // Sample Code: Use code BKKPOST20 to activate a 20% savings rule
+                if (enteredCodeValue === 'BKKPOST20') {
+                    const savingsPercent = 0.20; 
+                    const calcSavingsAmount = parsedNumericPrice * savingsPercent;
+                    const finalCalculatedTotal = parsedNumericPrice - calcSavingsAmount;
+
+                    updateBillingDisplay(
+                        formatCurrencyString(parsedNumericPrice),
+                        `- ${formatCurrencyString(calcSavingsAmount)}`,
+                        formatCurrencyString(finalCalculatedTotal)
+                    );
+
+                    couponMessage.textContent = 'Promo code "BKKPOST20" (20% Off) applied successfully!';
+                    couponMessage.classList.add('success');
+                } else if (enteredCodeValue === '') {
+                    couponMessage.textContent = 'Please type a valid promo code first.';
+                    couponMessage.classList.add('error');
+                } else {
+                    // Reset to base cost states on invalid validation matches
+                    updateBillingDisplay(
+                        formatCurrencyString(parsedNumericPrice),
+                        "0 THB",
+                        formatCurrencyString(parsedNumericPrice)
+                    );
+                    couponMessage.textContent = 'This promo code is invalid or expired.';
+                    couponMessage.classList.add('error');
+                }
+            });
+
+            // Helper Utility: Injects appropriate commas and appends standard localized currency suffix
+            function formatCurrencyString(rawIntVal) {
+                return rawIntVal.toLocaleString('en-US') + ' THB';
+            }
+
+            // Helper Utility: Updates calculation node text contents cleanly
+            function updateBillingDisplay(subtotalStr, discountStr, totalStr) {
+                sumPrice.textContent = subtotalStr;
+                sumDiscount.textContent = discountStr;
+                sumTotal.textContent = totalStr;
+            }
+
+            // Helper Utility: Hard locks elements if validation parameters fail
+            function disableCouponSystem() {
+                couponInput.disabled = true;
+                applyCouponBtn.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>

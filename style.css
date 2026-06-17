@@ -1,6 +1,7 @@
 @import 'assets/css/tokens.css';
 @import 'assets/css/base.css';
 @import 'assets/css/utilities.css';
+
 @import 'assets/css/components/_header.css';
 @import 'assets/css/components/_footer.css';
 @import 'assets/css/components/_section-title.css';
@@ -10,4 +11,5 @@
 @import 'assets/css/components/_pricing-section.css';
 @import 'assets/css/components/_content-section.css';
 @import 'assets/css/components/_faq-section.css';
-@import 'assets/css/components/_subscription-section.css'
+@import 'assets/css/components/_subscription-section.css';
+@import 'assets/css/components/_checkout.css';
