@@ -1,0 +1,48 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    width: 100%;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: stretch;
+}
+
+.card {
+    flex: 1 1 350px;
+    max-width: 500px; 
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding-block: var(--space-l);
+    padding-inline: var(--space-xl);
+    border-radius: var(--radius-m);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically inside the card */
+    align-items: center;     /* Centers content horizontally inside the card */
+    text-align: center;      /* Centers actual text lines smoothly */
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: var(--space-m);
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-s);
+    width: 100%;
+    margin-top: auto;         
+}
+
+.card-actions .button {
+    flex: 0 1 auto;
+    white-space: nowrap;
+}

@@ -1,0 +1,154 @@
+.content-section {
+    min-height: auto;
+    background-color: var(--background-color);
+    padding-block: var(--space-l);
+}
+
+.content-section .content-cssgal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    color: #fff;
+}
+
+.content-section .content-cssgal .slider-viewport {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--radius-m);
+}
+
+.content-section .content-cssgal .slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    font-size: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.content-section .content-cssgal .slider > div {
+    display: block;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-section .content-cssgal .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-section .content-cssgal .bullets {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding: 0;
+    width: 100%;
+}
+
+.content-section .content-cssgal .bullet-container {
+    display: none;
+    text-decoration: none;
+    padding: var(--space-m);
+    background-color: var(--accent-color);
+    border-left: 4px solid transparent;
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section .content-cssgal .bullet-container.active {
+    display: block; 
+    background-color: var(--accent-color);
+    border-left-color: color-mix(in srgb, var(--accent-color) 85%, var(--button-color));
+}
+
+.content-section .content-cssgal .bullet-title {
+    font-family: var(--font-primary);
+    font-size: var(--text-l);
+    color: var(--text-color);
+    margin: 0 0 var(--space-xs) 0;
+    font-weight: 600;
+}
+
+.content-section .content-cssgal .bullet-subtitle {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--space-s);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.ctrl-btn {
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: var(--text-base);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+.ctrl-btn:hover { background: rgba(0, 0, 0, 0.7); }
+
+@media (min-width: 769px) {
+    .content-section { min-height: 500px; }
+
+    .content-section .content-cssgal {
+        flex-direction: row;
+        height: 450px;
+        gap: 0;
+    }
+
+    .content-section .content-cssgal .slider-viewport,
+    .content-section .content-cssgal .bullets {
+        flex: 1;
+        width: 50%;
+        height: 100%;
+    }
+
+    .content-section .content-cssgal .slider {
+        flex-direction: column;
+    }
+
+    .content-section .content-cssgal .bullets {
+        padding-inline: var(--space-m);
+        justify-content: start;
+    }
+
+    .content-section .content-cssgal .bullet-container {
+        display: block; 
+    }
+    
+    .content-section .content-cssgal .bullet-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .slider-controls { display: none; } 
+}

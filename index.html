@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <link rel="stylesheet" href="style.css">
 <body>
-    <header class="header">
-        <a href="#"><img src="assets/img/ico/bp-logo.svg" alt="Bangkok Post Logo" class="logo"></a>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#" class="nav-link">Our product</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">How to subscribe</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Read Epaper</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="header container">
+            <a href="#" class="header-logo"><img src="assets/img/ico/bp-logo.svg" alt="Bangkok Post Logo" class="logo"></a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav class="nav" id="main-navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Our product</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">How to subscribe</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Read Epaper</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main-content">
-        <section class="hero-section">
+        <section class="hero-section hero-slider">
             <div class="hero-cssgal">
                 <div class="slider">
                     <div>
@@ -43,111 +51,346 @@
                 </div>
             </div>
         </section>
-<section class="pricing-section">
-    <form action="/subscribe-endpoint" method="POST" class="container">
-        <div class="pricing-cards">
-            <label class="pricing-card">
-                <input type="radio" name="subscription_plan" value="1-month">
-                <span class="radio-button"></span>
-                <div class="card-content">
-                    <h3 class="card-title">1 Month</h3>
-                    <p class="card-price">700 Baht</p>
-                    <ul class="card-features">   
-                        <li>Plus 5 free back issues</li>
-                    </ul>
+        <section class="pricing-section py-xl">
+            <h2 class="section-title">Choose your plan</h2>
+            <form action="#" method="POST" class="container">
+                <div class="pricing-cards">
+                    <label class="pricing-card">
+                        <input type="radio" name="subscription_plan" value="1-month">
+                        <span class="radio-button"></span>
+                        <div class="card-content">
+                            <h3 class="card-title">1 Month</h3>
+                            <p class="card-price">700 Baht</p>
+                            <ul class="card-features">   
+                                <li>Plus 5 free back issues</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="pricing-card">
+                        <input type="radio" name="subscription_plan" value="3-months">
+                        <span class="radio-button"></span>
+                        <div class="card-content">
+                            <h3 class="card-title">3 Months</h3>
+                            <p class="card-price">1,700 Baht</p>
+                            <p class="card-price-sub">2,100 Baht/month</p>
+                            <ul class="card-features">   
+                                <li>Plus 10 free back issues</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="pricing-card">
+                        <input type="radio" name="subscription_plan" value="6-months">
+                        <span class="radio-button"></span>
+                        <div class="card-content">
+                            <h3 class="card-title">6 Months</h3>
+                            <p class="card-price">2,800 Baht</p>
+                            <p class="card-price-sub">4,200 Baht/month</p>
+                            <ul class="card-features">   
+                                <li>Plus 30 free back issues</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="pricing-card">
+                        <input type="radio" name="subscription_plan" value="12-months">
+                        <span class="radio-button"></span>
+                        <div class="card-content">
+                            <h3 class="card-title">12 Months</h3>
+                            <p class="card-price">4,700 Baht</p>
+                            <p class="card-price-sub">8,400 Baht/month</p>
+                            <ul class="card-features">   
+                                <li>Plus 5 free back issues</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="pricing-card">
+                        <input type="radio" name="subscription_plan" value="36-months">
+                        <span class="radio-button"></span>
+                        <div class="card-content">
+                            <h3 class="card-title">36 Months</h3>
+                            <p class="card-price">12,600 Baht</p>
+                            <p class="card-price-sub">25,200 Baht/month</p>
+                            <ul class="card-features">   
+                                <li>Plus 10 free back issues</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="pricing-card">
+                        <input type="radio" name="subscription_plan" value="epaper-print-12-months">
+                        <span class="radio-button"></span>
+                        <div class="card-content">
+                            <h3 class="card-title">Epaper + Print Bundle<br>12 Months</h3>
+                            <p class="card-price">12,850 Baht</p>
+                            <ul class="card-features">   
+                                <li>Plus 30 free back issues</li>
+                            </ul>
+                        </div>
+                    </label>
                 </div>
-            </label>
-            <label class="pricing-card">
-                <input type="radio" name="subscription_plan" value="3-months">
-                <span class="radio-button"></span>
-                <div class="card-content">
-                    <h3 class="card-title">3 Months</h3>
-                    <p class="card-price">1,700 Baht</p>
-                    <p class="card-price-sub">2,100 Baht/month</p>
-                    <ul class="card-features">   
-                        <li>Plus 10 free back issues</li>
-                    </ul>
+                <div class="form-actions">
+                    <p class="selection-warning">No plan selected, please choose one to continue.</p>
+                    <button type="submit" class="button button--long">Subscribe Now</button>
+                    <p class="note">You can cancel anytime.</p>
                 </div>
-            </label>
-            <label class="pricing-card">
-                <input type="radio" name="subscription_plan" value="6-months">
-                <span class="radio-button"></span>
-                <div class="card-content">
-                    <h3 class="card-title">6 Months</h3>
-                    <p class="card-price">2,800 Baht</p>
-                    <p class="card-price-sub">4,200 Baht/month</p>
-                    <ul class="card-features">   
-                        <li>Plus 30 free back issues</li>
-                    </ul>
-                </div>
-            </label>
-            <label class="pricing-card">
-                <input type="radio" name="subscription_plan" value="12-months">
-                <span class="radio-button"></span>
-                <div class="card-content">
-                    <h3 class="card-title">12 Months</h3>
-                    <p class="card-price">4,700 Baht</p>
-                    <p class="card-price-sub">8,400 Baht/month</p>
-                    <ul class="card-features">   
-                        <li>Plus 5 free back issues</li>
-                    </ul>
-                </div>
-            </label>
-            <label class="pricing-card">
-                <input type="radio" name="subscription_plan" value="36-months">
-                <span class="radio-button"></span>
-                <div class="card-content">
-                    <h3 class="card-title">36 Months</h3>
-                    <p class="card-price">12,600 Baht</p>
-                    <p class="card-price-sub">25,200 Baht/month</p>
-                    <ul class="card-features">   
-                        <li>Plus 10 free back issues</li>
-                    </ul>
-                </div>
-            </label>
-            <label class="pricing-card">
-                <input type="radio" name="subscription_plan" value="epaper-print-12-months">
-                <span class="radio-button"></span>
-                <div class="card-content">
-                    <h3 class="card-title">Epaper + Print Bundle<br>12 Months</h3>
-                    <p class="card-price">12,850 Baht</p>
-                    <ul class="card-features">   
-                        <li>Plus 30 free back issues</li>
-                    </ul>
-                </div>
-            </label>
-        </div>
-        <div class="form-actions">
-            <p class="selection-warning">No plan selected, please choose one to continue.</p>
-            <button type="submit" class="submit-button">Subscribe Now</button>
-            <p class="note">You can cancel anytime.</p>
-        </div>
-    </form>
-</section>
-        <section class="content-section">
-            <h2 class="section-title">Welcome to BKKPOST</h2>
-            <p class="section-text">Your go-to source for the latest news and updates in Bangkok. Stay informed with our comprehensive coverage of local events, culture, and more.</p>
-            <button class="read-more-btn">Read More</button>
+            </form>
         </section>
-        <section class="faq-section">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3 class="faq-question">How do I subscribe to BKKPOST?</h3>
-                <p class="faq-answer">You can subscribe to BKKPOST by clicking on the "Subscribe" button on our website and choosing a subscription plan that suits your needs.</p>
+        <section class="content-section content-slider container py-xl">
+            <h2 class="section-title">There's a better way to experience the Bangkok Post Epaper</h2>
+            <div class="content-cssgal">
+                <div class="slider-viewport">
+                    <div class="slider">
+                        <div>
+                            <img src="assets/img/epaper_01.jpg" alt="Feels like the real paper Anytime, Any place" class="hero-image">
+                        </div>
+                        <div>
+                            <img src="assets/img/epaper_02.jpg" alt="1-year subscription 13 THB a day" class="hero-image">
+                        </div>
+                        <div>
+                            <img src="assets/img/epaper_03.jpg" alt="Feels like the real paper Anytime, Any place" class="hero-image">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button type="button" class="ctrl-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+                        <button type="button" class="ctrl-btn next-btn" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </div>
+                <div class="bullets">
+                    <a href="#" class="bullet-container active" data-index="0">
+                        <h3 class="bullet-title">Read anytime, anywhere on any device</h3>
+                        <p class="bullet-subtitle">Enjoy seamless access across up to 3 devices and 1 browser, with offline reading whenever you need.</p>
+                    </a>
+                    <a href="#" class="bullet-container" data-index="1">
+                        <h3 class="bullet-title">Familiar newspaper layout, optimised for your screen</h3>
+                        <p class="bullet-subtitle">Enjoy the classic print experience, thoughtfully adapted for your screen, Curated by editors, not algorithms.</p>
+                    </a>
+                    <a href="#" class="bullet-container" data-index="2">
+                        <h3 class="bullet-title">Complete archive at your fingertips</h3>
+                        <p class="bullet-subtitle">Access all past issues, including every section and special publications, anytime you want.</p>
+                    </a>
+                </div>
             </div>
-            <div class="faq-item">
-                <h3 class="faq-question">What content is included in the subscription?</h3>
-                <p class="faq-answer">Our subscription includes access to all news articles, exclusive content, and our weekly newsletter. Higher-tier plans may include additional perks such as ad-free browsing and early access to certain articles.</p>
+        </section>
+        <section class="faq-section py-xl">
+            <div class="container">
+                <h2 class="section-title">FAQ</h2>
+                <hr>
+                <div class="faq accordion">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1" class="faq-toggle">
+                        <label for="faq1" class="faq-question">
+                            <span class="faq-question-text">What is the difference between reading the Bangkok Post newspaper, the Epaper and the website?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                <strong>Epaper</strong>
+                                <br>The Epaper can be accessed anywhere in the world on up to three mobile devices and one web browser with a single login. The annual plan is more affordable than the printed edition and includes translation into over 20 languages. You can conveniently read on a web browser or in our application. The app allows online and offline reading by downloading the Epaper and saving it for offline reading, with content identical to the printed newspaper.
+                            </p>
+                            <br>
+                            <p>    
+                                <strong>Printed Newspaper</strong>
+                                <br>Our newspaper has been published for 80 years, offering premium-quality content on paper. Besides daily updates, it is perfect as a collectible. You will also enjoy crosswords and comic strips that are not available on the website.
+                            </p>
+                            <br>
+                            <p>
+                                <strong>Website</strong>
+                                <br>The website brings you the fastest updates, with breaking news from our editorial newsroom. You can subscribe to newsletters for exclusive updates delivered to your inbox. The site also offers a wide range of categories and features, including Learning tools, vocabulary cards, video podcasts and much more.
+                            </p>
+                            <br>
+                            <p>
+                                For more details, please contact our staff.
+                                <br><strong>Email:</strong> <a href="mailto:enewspaper@bangkokpost.co.th" target="_blank">enewspaper@bangkokpost.co.th</a>
+                                <br><strong>Tel:</strong> <a href="tel:0-2616-4615" target="_blank">0-2616-4615 (Mon-Fri 8:30 AM-5:30 PM, UTC+7)</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2" class="faq-toggle">
+                        <label for="faq2" class="faq-question">
+                            <span class="faq-question-text">Do you offer a free trial of the Epaper for new readers?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. You can request a free 3-day trial by contacting us.
+                                <br><strong>Email:</strong> <a href="mailto:enewspaper@bangkokpost.co.th" target="_blank">enewspaper@bangkokpost.co.th</a>
+                                <br><strong>Tel:</strong> <a href="tel:0-2616-4615" target="_blank">0-2616-4615 (Mon-Fri 8:30 AM-5:30 PM, UTC+7)</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3" class="faq-toggle">
+                        <label for="faq3" class="faq-question">
+                            <span class="faq-question-text">Can I still read the Epaper if I'm offline?"</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Our app allows you to read both online and offline.
+                                <br>You can download the Epaper and save it for offline reading.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq4" class="faq-toggle">
+                        <label for="faq4" class="faq-question">
+                            <span class="faq-question-text">How do I switch from a monthly plan to a yearly one?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                You can switch via your account on our website or contact our staff for assistance.
+                                <br><strong>Email:</strong> <a href="mailto:enewspaper@bangkokpost.co.th" target="_blank">enewspaper@bangkokpost.co.th</a>
+                                <br><strong>Tel:</strong> <a href="tel:0-2616-4615" target="_blank">0-2616-4615 (Mon-Fri 8:30 AM-5:30 PM, UTC+7)</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq5" class="faq-toggle">
+                        <label for="faq5" class="faq-question">
+                            <span class="faq-question-text">How do I create an account?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                You can create an account at <a href="https://www.bangkokpost.com/Epaper" target="_blank">https://www.bangkokpost.com/Epaper</a> or contact our staff for assistance.
+                                <br><strong>Email:</strong> <a href="mailto:enewspaper@bangkokpost.co.th" target="_blank">enewspaper@bangkokpost.co.th</a>
+                                <br><strong>Tel:</strong> <a href="tel:0-2616-4615" target="_blank">0-2616-4615 (Mon-Fri 8:30 AM-5:30 PM, UTC+7)</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq6" class="faq-toggle">
+                        <label for="faq6" class="faq-question">
+                            <span class="faq-question-text">I've forgotten my password?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                If you've forgotten your password, <a href="https://www.bangkokpost.com/epaper/howto" target="_blank">click here</a> to reset on the site and use your registered email address. If you still need assistance, please contact Customer Service.
+                                <br><strong>Email:</strong> <a href="mailto:enewspaper@bangkokpost.co.th" target="_blank">enewspaper@bangkokpost.co.th</a>
+                                <br><strong>Tel:</strong> <a href="tel:0-2616-4615" target="_blank">0-2616-4615 (Mon-Fri 8:30 AM-5:30 PM, UTC+7)</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq7" class="faq-toggle">
+                        <label for="faq7" class="faq-question">
+                            <span class="faq-question-text">Can I use my account on multiple devices?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. You can use your account on up to three mobile devices and one web browser using a single login.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq8" class="faq-toggle">
+                        <label for="faq8" class="faq-question">
+                            <span class="faq-question-text">Do you have an app for reading the news?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. A free Epaper is available. You can also access it through your web browser.
+                            </p>
+                        </div>
+                    </div>
+                        <div class="faq-item">
+                        <input type="checkbox" id="faq9" class="faq-toggle">
+                        <label for="faq9" class="faq-question">
+                            <span class="faq-question-text">How do I cancel my subscription?</span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                You can cancel at any time by contacting our staff.
+                                <br><strong>Email:</strong> <a href="mailto:enewspaper@bangkokpost.co.th" target="_blank">enewspaper@bangkokpost.co.th</a>
+                                <br><strong>Tel:</strong> <a href="tel:0-2616-4615" target="_blank">0-2616-4615 (Mon-Fri 8:30 AM-5:30 PM, UTC+7)</a>
+                                <br><br><mark>*Please be advised that all payments are non-refundable.</mark>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq10" class="faq-toggle">
+                        <label for="faq10" class="faq-question">
+                            <span class="faq-question-text">How can I check my subscription status? </span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                You can view your current status and plan details in My profile under the My Subscription section.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq11" class="faq-toggle">
+                        <label for="faq11" class="faq-question">
+                            <span class="faq-question-text">Why can I not access the content after payment? </span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Please ensure that you have completed all the required information in the steps following your payment and that you have received an activation email to verify your account. If you have already completed these steps and still cannot access the service, please check your status at My profile under the My Subscription section or contact our support team for further assistance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq12" class="faq-toggle">
+                        <label for="faq12" class="faq-question">
+                            <span class="faq-question-text">Is the Epaper email the same as the website login? </span>
+                            <span class="faq-icon">+</span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Not necessarily. The email used to subscribe to and access the Epaper may be different from the one used for website login.
+                                <br><br>
+                                The website login is designed to verify user access and activity, while Epaper access is linked to the email provided during the subscription process.
+                                <br><br>
+                                If you want to view your Epaper subscription details or plan history, you can go to My Profile on the website. Please make sure to sign in using the same email address you used when subscribing to the Epaper.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section class="subscription-section">
-        <section class="subscription-section">
-            <h2 class="section-title">Subscribe to BKKPOST</h2>
-            <p class="section-text">Join our community of readers and never miss an update. Choose a plan that works for you.</p>
-            <button class="subscribe-btn">Get Started</button>
+        </section>
+        <section class="subscription-section py-xl">
+            <div class="subscription-cards container">
+                <h2 class="section-title">Choose the format you prefer, and enjoy even more with your subscription.</h2>
+                <div class="card-container">
+                    <div class="print-card card">
+                        <img src="assets/img/newspaper.png" alt="Newspaper deliver to your home">
+                        <h3>Print Subscription<small> (Thailand Only)</small></h3>
+                        <p>Get the Bangkok Post delivered to your home in Bangkok and enjoy the classic print reading experience</p>
+                        <div class="card-actions">
+                            <a href="#" class="button">Subscribe</a>
+                            <a href="#" class="button">Where to find us</a>
+                        </div>
+                    </div>
+                    <div class="digital-card card">
+                        <img src="assets/img/digital01.png" alt="Digital newspaper, real-time update">
+                        <h3>Digital Subscription</h3>
+                        <p>Unlimited access to Bangkok Post's exclusive online journalism, including premium stories, expert insight, and real-tine updates.</p>
+                        <div class="card-actions">
+                            <a href="#" class="button">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
-        <p class="footer-text">&copy; 2024 BKKPOST. All rights reserved.</p>
+        <p class="footer-text">&copy; 2025 Bangkok Post Public Company Limited</p>
+            <ul class="footer-links">
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Republishing permission</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Cookies policy</a></li>
+                <li><a href="#">Online advertising</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Tell us what you think</a></li>
+                <li><a href="#">Partnership</a></li>
+            </ul>
     </footer>
     <script src="assets/js/script.js"></script>
 </body>

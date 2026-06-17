@@ -1,11 +1,9 @@
 .flex { display: flex; }
-.gap-m { gap: var(--space-m); }
-.p-m { padding: var(--space-m); }
-.bg-primary { background-color: var(--primary); color: white; }
+.py-xl { padding-block: var(--space-xl); }
 
 .container {
     width: 90%;         
     max-width: 1200px;  
     margin: 0 auto;     
-    padding: 0 20px;     
+    padding-inline: var(--space-m);     
 }

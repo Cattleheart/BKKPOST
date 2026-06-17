@@ -1,0 +1,30 @@
+.subscription-cards h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-l);
+    font-weight: normal;
+}
+
+.subscription-cards p {
+    padding-block: var(--space-m);
+    font-size: var(--text-s);
+    text-align: start;
+}
+
+.subscription-cards small {
+    font-family: var(--font-primary);
+    font-size: var(--text-s);
+}
+
+.subscription-cards a {
+    font-size: var(--text-base);
+}
+
+.subscription-cards .print-card {
+    background-color: lightgray;
+    border-color: lightgray;
+}
+
+.subscription-cards .digital-card {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}

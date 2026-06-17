@@ -1,0 +1,8 @@
+.section-title {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: var(--text-xxl);
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: var(--space-xl);
+}

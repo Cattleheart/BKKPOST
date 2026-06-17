@@ -1,0 +1,54 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-s) var(--space-m); 
+    font-family: var(--font-display);
+    font-size: var(--text-l);
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--button-color);
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    /* Create an invisible 2px border container on load to prevent hover layout shifts */
+    border: 2px solid transparent; 
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #ffffff;
+    color: var(--button-color);
+    border-color: var(--button-color);
+    transform: translateY(-2px);
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.button:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--button-color) 60%, #000);
+    outline-offset: 3px;
+}
+
+.button:disabled,
+.button.is-disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    border-color: transparent !important;
+    cursor: not-allowed;
+    pointer-events: none; /* Blocks mouse clicks completely */
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.button--long {
+    width: 60%;
+}
+
+@media (min-width: 768px) {
+    .button--long {
+        width: 40%;
+}
+}
